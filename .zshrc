@@ -34,6 +34,7 @@ zinit light zsh-users/zsh-syntax-highlighting
 
 # eza
 alias l="eza -lah --icons"
+alias lt="eza -lah --icons --tree"
 alias ls="eza --icons"
 alias ll="eza -l --icons"
 
