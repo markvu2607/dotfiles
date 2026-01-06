@@ -35,6 +35,9 @@ zinit light zsh-users/zsh-syntax-highlighting
 # zellij
 alias zj="zellij"
 
+# task
+alias task="go-task"
+
 # bat
 alias cat="bat -p"
 
@@ -42,9 +45,6 @@ alias cat="bat -p"
 alias zz='__zoxide_zi'
 alias cd="z"
 eval "$(zoxide init zsh)"
-
-# mise
-eval "$(mise activate zsh)"
 
 # starship
 eval "$(starship init zsh)"
