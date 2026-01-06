@@ -1,7 +1,8 @@
 version: '3'
 
 vars:
-  PACKAGES: stow bat zellij
+  COPR_REPOS: varlad/zellij jdxcode/mises
+  PACKAGES: stow bat zellij podman podman-compose starship zoxide mise
 
 tasks:
   default:
@@ -11,13 +12,25 @@ tasks:
       - task: stow-dotfiles
       - echo "✅ Setup complete! Please restart your terminal or run 'exec zsh'."
 
+  enable-copr:
+    desc: "Enable COPR repositories"
+    cmds:
+      - echo "🔧 Enabling COPR repositories..."
+      - |
+        for repo in {{.COPR_REPOS}}; do
+          sudo dnf copr enable -y $repo
+        done
+    status:
+      - command -v zellij && command -v mise
+
   install-packages:
     desc: "Install system packages via DNF"
+    deps: [enable-copr]
     cmds:
       - echo "📦 Installing packages..."
       - sudo dnf install -y {{.PACKAGES}}
     status:
-      - command -v stow
+      - command -v stow && command -v zellij && command -v bat && command -v podman && command -v podman-compose && command -v starship
 
   stow-dotfiles:
     desc: "Symlink dotfiles using GNU Stow from the root"
