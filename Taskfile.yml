@@ -1,0 +1,26 @@
+version: '3'
+
+vars:
+  PACKAGES: stow bat zellij
+
+tasks:
+  default:
+    desc: "Install everything (Packages + Dotfiles)"
+    cmds:
+      - task: install-packages
+      - task: stow-dotfiles
+      - echo "✅ Setup complete! Please restart your terminal or run 'exec zsh'."
+
+  install-packages:
+    desc: "Install system packages via DNF"
+    cmds:
+      - echo "📦 Installing packages..."
+      - sudo dnf install -y {{.PACKAGES}}
+    status:
+      - command -v stow
+
+  stow-dotfiles:
+    desc: "Symlink dotfiles using GNU Stow from the root"
+    cmds:
+      - echo "🔗 Linking dotfiles..."
+      - stow -v -R -t "$HOME" .
