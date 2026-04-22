@@ -1,0 +1,6 @@
+export FZF_DEFAULT_COMMAND="fd --type f --hidden --follow --exclude .git"
+export FZF_DEFAULT_OPTS="--height 40% --layout reverse --border --inline-info --cycle"
+export FZF_CTRL_T_COMMAND="fd --type f"
+export FZF_CTRL_T_OPTS="--preview 'bat --color=always --style=numbers --line-range=:500 {}'"
+export FZF_ALT_C_COMMAND="fd --type d"
+export FZF_ALT_C_OPTS="--preview 'tree -C {} | head -200'"
