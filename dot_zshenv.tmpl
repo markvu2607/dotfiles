@@ -1,6 +1,9 @@
 export LANG="en_US.UTF-8"
 export EDITOR="hx"
 
+export INFISICAL_API_URL="https://infisical.miava.io.vn"
+
+{{ if eq .chezmoi.os "darwin" -}}
 if [ -d "$ANDROID_HOME/ndk" ]; then
   export NDK_HOME="$ANDROID_HOME/ndk/$(ls -1 "$ANDROID_HOME/ndk" | tail -n 1)"
 fi
@@ -11,7 +14,7 @@ export ANDROID_HOME="$HOME/Library/Android/sdk"
 path+=(
   "$HOME/.antigravity/antigravity/bin"
 )
+{{ end -}}
 
 export PATH
 
-export INFISICAL_API_URL="https://infisical.miava.io.vn"
