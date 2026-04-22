@@ -1,0 +1,17 @@
+export LANG="en_US.UTF-8"
+export EDITOR="hx"
+
+if [ -d "$ANDROID_HOME/ndk" ]; then
+  export NDK_HOME="$ANDROID_HOME/ndk/$(ls -1 "$ANDROID_HOME/ndk" | tail -n 1)"
+fi
+
+export JAVA_HOME="/Applications/Android Studio.app/Contents/jbr/Contents/Home"
+export ANDROID_HOME="$HOME/Library/Android/sdk"
+
+path+=(
+  "$HOME/.antigravity/antigravity/bin"
+)
+
+export PATH
+
+export INFISICAL_API_URL="https://infisical.miava.io.vn"
