@@ -1,0 +1,7 @@
+[user]
+    name = Mark Vu
+    email = markvu2607@miava.io.vn
+[init]
+    defaultBranch = main
+[core]
+    editor = hx
