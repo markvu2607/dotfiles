@@ -1,5 +1,27 @@
 // If you'd like to override the default keybindings completely, be sure to change "keybinds" to "keybinds clear-defaults=true"
 keybinds {
+    shared {
+        bind "Alt y" {
+            Run "yazi" {
+                floating true
+                close_on_exit true
+                x "20%"
+                y "0%"
+                width "80%"
+                height "80%"
+            }
+        }
+        bind "Alt g" {
+            Run "lazygit" {
+                floating true
+                close_on_exit true
+                x "20%"
+                y "0%"
+                width "80%"
+                height "80%"
+            }
+        }
+    }
     normal {
         // uncomment this and adjust key if using copy_on_select=false
         // bind "Alt c" { Copy; }
