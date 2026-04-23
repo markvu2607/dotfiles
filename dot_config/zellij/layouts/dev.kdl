@@ -4,13 +4,10 @@ layout {
     }
     pane split_direction="vertical" {
         pane size="80%" stacked=true {   
-            pane name="git" {
-                command "lazygit"
-                focus true
-            }
             pane name="editor" {
                 command "hx"
                 args "."
+                focus true
             }
         }
       
@@ -24,14 +21,5 @@ layout {
     }
     pane size=1 borderless=true {
         plugin location="zellij:status-bar"
-    }
-    floating_panes {
-        pane name="yazi" {
-            command "yazi"
-            x "20%"
-            y "0%"
-            width "80%"
-            height "80%"
-        }
     }
 }

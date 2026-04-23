@@ -14,6 +14,8 @@ zinit light zsh-users/zsh-syntax-highlighting
 alias cat="bat"
 alias zj="zellij"
 alias cd="z"
+alias "o:y"="zellij run -f -- yazi"
+alias "o:g"="zellij run -f -- lazygit"
 
 eval "$(mise activate zsh)"
 
