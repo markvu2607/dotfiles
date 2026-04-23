@@ -7,6 +7,15 @@ layout {
         pane size=1 borderless=true {
             plugin location="zellij:status-bar"
         }
+        floating_panes {
+            pane name="file-explorer" {
+                command "yazi"
+                x "20%"
+                y "0%"
+                width "80%"
+                height "80%"
+            }
+        }
     }
     tab name="tools" focus=true {
         pane split_direction="vertical" {
