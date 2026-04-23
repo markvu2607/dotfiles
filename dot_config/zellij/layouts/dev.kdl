@@ -1,25 +1,29 @@
 layout {
-    pane size=1 borderless=true {
-        plugin location="zellij:tab-bar"
-    }
-    pane split_direction="vertical" {
-        pane size="80%" stacked=true {   
-            pane name="editor" {
-                command "hx"
-                args "."
-                focus true
-            }
+    default_tab_template {
+        pane size=1 borderless=true {
+            plugin location="zellij:tab-bar"
         }
-      
-        pane name="sidebar" size="20%" stacked=true {                       
-            pane name="runtime"
-            pane name="claude" {
+        children
+        pane size=1 borderless=true {
+            plugin location="zellij:status-bar"
+        }
+    }
+    tab name="tools" focus=true {
+        pane split_direction="vertical" {
+            pane split_direction="horizontal" size="20%" {
+                pane name="runtime" size="30%"
+                pane name="terminal" size="70%"
+            }
+            pane name="claude" size="20%" {                       
                 command "claude"
             }
-            pane name="terminal"
+            pane name="git" command="lazygit" focus=true
         }
     }
-    pane size=1 borderless=true {
-        plugin location="zellij:status-bar"
+    tab name="editor" {
+        pane name="helix" {
+            command "hx"
+            args "."
+        }
     }
 }
