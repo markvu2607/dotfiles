@@ -7,15 +7,19 @@ importModuleSpecifier = "non-relative"
 [language-server.rust-analyzer]
 config.check.command = "clippy"
 
+[language-server.oxlint]
+command = "oxlint"
+args = "--lsp"
+
 [[language]]
 name = "tsx"
 auto-format = true
-language-servers = [ "vtsls" ]
+language-servers = [ "vtsls", "oxlint" ]
 
 [[language]]
 name = "typescript"
 auto-format = true
-language-servers = [ "vtsls" ]
+language-servers = [ "vtsls", "oxlint" ]
 
 [[language]]
 name = "rust"
