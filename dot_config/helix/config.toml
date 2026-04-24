@@ -1,4 +1,5 @@
-theme = "kanagawa"
+# theme = "kanagawa"
+theme = "base16_terminal"
 
 [editor.file-picker]
 hidden = false
