@@ -9,7 +9,7 @@ config.check.command = "clippy"
 
 [language-server.oxlint]
 command = "oxlint"
-args = "--lsp"
+args = ["--lsp"]
 
 [[language]]
 name = "tsx"
