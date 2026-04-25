@@ -1,0 +1,20 @@
+theme = "Catppuccin Mocha"
+
+font-family = "JetBrainsMono Nerd Font"
+font-style = "Regular"
+{{ if eq .chezmoi.os "darwin" -}}
+font-size = 12
+{{- else -}}
+font-size = 10
+{{- end }}
+
+{{ if eq .chezmoi.os "darwin" -}}
+macos-option-as-alt = left
+{{- end }}
+
+keybind = clear
+keybind = super+shift+r=reload_config
+keybind = super+c=copy_to_clipboard
+keybind = super+v=paste_from_clipboard
+keybind = super+q=quit
+keybind = super+t=new_tab
