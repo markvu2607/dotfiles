@@ -93,49 +93,9 @@
   "ui_font_size": 14.0,
   "buffer_font_size": 12.0,
   "theme": "Catppuccin Mocha",
-  "lsp": {
-    "oxlint": {
-      "initialization_options": {
-        "settings": {
-          "configPath": null,
-          "run": "onType",
-          "disableNestedConfig": false,
-          "fixKind": "safe_fix",
-          "unusedDisableDirectives": "deny"
-        }
-      }
-    },
-    "oxfmt": {
-      "initialization_options": {
-        "settings": {
-          "fmt.configPath": null,
-          "run": "onSave"
-        }
-      }
-    }
-  },
   "languages": {
-    "TypeScript": {
-      "language_servers": ["oxlint", "oxfmt", "!eslint"],
-      "formatter": {
-        "language_server": {
-          "name": "oxfmt"
-        }
-      }
-    },
-    "TSX": {
-      "language_servers": ["oxlint", "oxfmt", "!eslint"],
-      "formatter": {
-        "language_server": {
-          "name": "oxfmt"
-        }
-      }
-    },
     "Nix": {
-      "language_servers": ["nil", "!nixd"],
-    },
-    "JSONC": {
-      "formatter": "language_server",
-    },
-  },
+      "language_servers": ["nil"]
+    }
+  }
 }
