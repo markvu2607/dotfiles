@@ -93,9 +93,19 @@
   "ui_font_size": 14.0,
   "buffer_font_size": 12.0,
   "theme": "Catppuccin Mocha",
+  "languages_servers": {
+    "nil": {
+      "settings": {
+        "formatting": {
+          "command": ["alejandra"]
+        }
+      }
+    }
+  },
   "languages": {
     "Nix": {
-      "language_servers": ["nil"]
+      "language_servers": ["nil"],
+      "formatter": "language_server"
     }
   }
 }
