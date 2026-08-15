@@ -11,6 +11,7 @@ zinit light zsh-users/zsh-syntax-highlighting
 alias zj="zellij"
 alias cat="bat"
 alias cd="z"
+alias lg="lazygit"
 
 eval "$(mise activate zsh)"
 eval "$(starship init zsh)"
