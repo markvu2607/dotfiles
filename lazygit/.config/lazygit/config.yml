@@ -1,0 +1,13 @@
+git:
+  paging:
+    colorArg: always
+    pager: delta --dark --paging=never --line-numbers --hyperlinks --side-by-side
+
+gui:
+  theme:
+    activeBorderColor:
+      - '#89b4fa'
+      - bold
+    selectedLineBgColor:
+      - '#313244'
+  showFileTree: false
