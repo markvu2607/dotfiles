@@ -1,0 +1,23 @@
+[user]
+    name = Mark Vu
+    email = markvu2607@miava.io.vn
+
+[init]
+    defaultBranch = main
+
+[core]
+    editor = hx
+    pager = delta
+
+[interactive]
+    diffFilter = delta --color-only
+
+[delta]
+    navigate = true
+    light = false
+    line-numbers = true
+    side-by-side = true
+    syntax-theme = Dracula
+
+[merge]
+    conflictstyle = zdiff3
