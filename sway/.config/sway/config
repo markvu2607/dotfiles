@@ -227,4 +227,6 @@ bindsym $mod+r mode "resize"
 #
 include '$(/usr/libexec/sway/layered-include "/usr/share/sway/config.d/*.conf" "/etc/sway/config.d/*.conf" "${XDG_CONFIG_HOME:-$HOME/.config}/sway/config.d/*.conf")'
 
+# custom
 exec --no-startup-id fcitx5 -d
+bindsym $mod+Shift+s exec grim -g "$(slurp)" - | wl-copy
