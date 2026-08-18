@@ -12,6 +12,7 @@ alias zj="zellij"
 alias cat="bat"
 alias cd="z"
 alias lg="lazygit"
+alias hr="herdr"
 
 eval "$(mise activate zsh)"
 eval "$(starship init zsh)"
