@@ -230,3 +230,7 @@ include '$(/usr/libexec/sway/layered-include "/usr/share/sway/config.d/*.conf" "
 # custom
 exec --no-startup-id fcitx5 -d
 bindsym $mod+Shift+s exec grim -g "$(slurp)" - | wl-copy
+
+input "type:keyboard" {
+    xkb_options ctrl:nocaps
+}
