@@ -5,3 +5,8 @@ hidden = false
 
 [editor]
 bufferline = "always"
+mouse = false
+middle-click-paste=false
+completion-replace=true
+trim-final-newlines=true
+trim-trailing-whitespace=true
