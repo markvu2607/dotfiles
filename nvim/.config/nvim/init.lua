@@ -3,7 +3,7 @@ vim.g.mapleader = " "
 vim.opt.clipboard = "unnamedplus"
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
-vim.opt.timeoutlen = 500
+vim.opt.timeoutlen = 300
 
 -- Remove default behavior of <Space> in normal and visual modes
 vim.keymap.set({ "n", "v" }, "<Space>", "<Nop>", { silent = true })
