@@ -118,6 +118,8 @@ now_if_args(function()
 		"oxlint",
 		"oxfmt",
 		"gopls",
+		"pyright",
+		"ruff",
 	})
 end)
 
@@ -155,6 +157,7 @@ later(function()
 		formatters_by_ft = {
 			lua = { "stylua" },
 			go = { "goimports", "gofmt" },
+			python = { "ruff_organize_imports", "ruff_format" },
 			javascript = { "oxfmt" },
 			typescript = { "oxfmt" },
 			javascriptreact = { "oxfmt" },
