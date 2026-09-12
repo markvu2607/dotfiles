@@ -37,6 +37,11 @@ end
 return {
 	cmd = { "pyright-langserver", "--stdio" },
 	filetypes = { "python" },
+	capabilities = {
+		window = {
+			workDoneProgress = false,
+		},
+	},
 	root_markers = {
 		"pyrightconfig.json",
 		"pyproject.toml",
