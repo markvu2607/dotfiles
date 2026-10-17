@@ -1,4 +1,2 @@
 [tools]
-node="lts"
-pnpm="latest"
-go="latest"
+go = "latest"
