@@ -8,21 +8,20 @@ Khi vào container (`distrobox enter <tên>`), bạn vào thẳng shell **`fish`
 
 | Container | Vai trò | Công cụ & Shell |
 | :--- | :--- | :--- |
-| **`fe`** | Frontend High Performance | **`fish`** shell + **Vite+ (`vp`)** (tự cài sẵn qua `init_hooks`, quản lý JS runtime + Oxc `oxlint`/`oxfmt`) + **`rustup`** + bộ build C/C++/OpenSSL (`gcc`, `gcc-c++`, `make`, `pkg-config`, `openssl-devel`) |
+| **`fe`** | Frontend High Performance | **`fish`** shell + **Vite+ (`vp`)** & **`rustup`** (`stable` + `rust-analyzer`, `clippy`, `rustfmt`, `rust-src`, tự cài sẵn qua `init_hooks`) + bộ build C/C++/OpenSSL (`gcc`, `gcc-c++`, `make`, `pkg-config`, `openssl-devel`) |
 
 *(Sau này có thể thêm các role khác như `[be-go]`, `[be-dotnet]`, `[py]` ngay trong `distrobox.ini`.)*
 
 ## Cách sử dụng
 
 ```bash
-# 1. Dựng container 'fe' từ ~/dotfiles (tự cài fish, rustup, Vite+ vp)
+# 1. Dựng container 'fe' từ ~/dotfiles (tự cài fish, Vite+ vp, rustup + toolchain stable)
 just box fe
 
 # 2. Vào container (tự mở bằng fish)
 distrobox enter fe
 
-# 3. Cài Rust toolchain lần đầu theo ý bạn (ví dụ stable + rust-analyzer + WASM)
-rustup toolchain install stable --component rust-analyzer,clippy,rustfmt,rust-src
+# 3. (Tuỳ chọn) Cài thêm target khi cần (ví dụ WASM)
 # rustup target add wasm32-unknown-unknown
 ```
 

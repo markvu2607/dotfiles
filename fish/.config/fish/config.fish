@@ -4,6 +4,14 @@ if test -x /home/linuxbrew/.linuxbrew/bin/brew
 	eval (/home/linuxbrew/.linuxbrew/bin/brew shellenv)
 end
 
+switch "$CONTAINER_ID"
+    case fe
+        fish_add_path -g ~/.cargo/bin
+        if test -f ~/.config/vite-plus/env.fish
+            source ~/.config/vite-plus/env.fish
+        end
+end
+
 if status is-interactive
     if type -q starship
         starship init fish | source
