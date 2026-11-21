@@ -8,17 +8,6 @@
 
 [core]
     editor = nvim
-    pager = delta
-
-[interactive]
-    diffFilter = delta --color-only
-
-[delta]
-    navigate = true
-    light = false
-    line-numbers = true
-    side-by-side = true
-    syntax-theme = Dracula
 
 [merge]
     conflictstyle = zdiff3
