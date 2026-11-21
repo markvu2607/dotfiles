@@ -17,6 +17,7 @@ Cấu hình cá nhân cho **Fedora Sway Atomic**, quản lý theo hướng tối
 | `nvim` | Neovim config |
 | `bat` / `git` | Cấu hình `bat` và Git |
 | `brew` | Danh sách gói CLI trong `~/.Brewfile` |
+| `distrobox` | Manifest dựng container dev theo vai trò (xem [`distrobox/README.md`](./distrobox/README.md)) |
 | `environment.d` | Biến môi trường phiên người dùng (Bitwarden SSH agent) |
 
 ## Cài đặt trên máy mới (Bootstrap)
@@ -40,7 +41,8 @@ Cấu hình cá nhân cho **Fedora Sway Atomic**, quản lý theo hướng tối
 ## Các lệnh `just`
 
 ```bash
-just         # Xem danh sách lệnh
-just brew    # Đồng bộ gói từ ~/.Brewfile (brew bundle -g)
-just reload  # Kiểm tra cú pháp Sway và reload Sway + Waybar
+just              # Xem danh sách lệnh
+just brew         # Đồng bộ gói từ ~/.Brewfile (brew bundle -g)
+just box <name>   # Dựng 1 distrobox container (ví dụ: just box fe)
+just reload       # Kiểm tra cú pháp Sway và reload Sway + Waybar
 ```
