@@ -12,7 +12,7 @@ nmap_leader("en", "<Cmd>lua MiniNotify.show_history()<CR>", "Notifications")
 
 -- Find
 nmap_leader("ff", "<Cmd>Pick files<CR>", "Files")
-nmap_leader("fd", 'Cmd>Pick diagnostic scope="all"<CR>', "Diagnostic workspace")
+nmap_leader("fD", '<Cmd>Pick diagnostic scope="all"<CR>', "Diagnostic workspace")
 nmap_leader("fd", '<Cmd>Pick diagnostic scope="current"<CR>', "Diagnostic buffer")
 nmap_leader("fb", "<Cmd>Pick buffers<CR>", "Buffers")
 nmap_leader("fg", "<Cmd>Pick grep_live<CR>", "Grep live")
@@ -36,7 +36,7 @@ nmap_leader("ll", "<Cmd>lua vim.lsp.codelens.run()<CR>", "Lens")
 nmap_leader("lr", "<Cmd>lua vim.lsp.buf.rename()<CR>", "Rename")
 nmap_leader("lR", "<Cmd>lua vim.lsp.buf.references()<CR>", "References")
 nmap_leader("ls", "<Cmd>lua vim.lsp.buf.definition()<CR>", "Source definition")
-nmap_leader("lt", "<Cmd>lua vim.lsp.buf.type_references()<CR>", "Type definition")
+nmap_leader("lt", "<Cmd>lua vim.lsp.buf.type_definition()<CR>", "Type definition")
 
 -- Map
 nmap_leader("mf", "<Cmd>lua MiniMap.toggle_focus()<CR>", "Focus (toggle)")
