@@ -1,0 +1,11 @@
+git:
+  diffRenderers:
+    - colorArg: always
+      command: delta --dark --paging=never
+  log:
+    showGraph: always
+    showWholeGraph: true
+gui:
+  border: single
+os:
+  editPreset: nvim
