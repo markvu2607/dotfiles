@@ -1,6 +1,8 @@
 git:
   diffRenderers:
     - colorArg: always
+      command: delta --dark --paging=never --side-by-side
+    - colorArg: always
       command: delta --dark --paging=never
   log:
     showGraph: always
