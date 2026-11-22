@@ -7,6 +7,10 @@ Config.now(function()
 end)
 
 Config.now(function()
+	require("mini.icons").setup()
+end)
+
+Config.now(function()
 	require("mini.notify").setup()
 end)
 
