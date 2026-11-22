@@ -1,5 +1,5 @@
 Config.now(function()
-	vim.cmd("colorscheme miniautumn")
+	vim.cmd("colorscheme minischeme")
 end)
 
 Config.now(function()
