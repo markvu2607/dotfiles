@@ -1,4 +1,5 @@
 brew "neovim"
+brew "tree-sitter-cli"
 brew "fish"
 brew "ripgrep"
 brew "fd"
