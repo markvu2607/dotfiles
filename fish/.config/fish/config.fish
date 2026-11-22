@@ -10,6 +10,8 @@ switch "$CONTAINER_ID"
         if test -f ~/.config/vite-plus/env.fish
             source ~/.config/vite-plus/env.fish
         end
+    case cp
+        fish_add_path -g ~/.cargo/bin
 end
 
 if status is-interactive

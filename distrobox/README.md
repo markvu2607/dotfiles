@@ -9,6 +9,7 @@ Khi vào container (`distrobox enter <tên>`), bạn vào thẳng shell **`fish`
 | Container | Vai trò | Công cụ & Shell |
 | :--- | :--- | :--- |
 | **`fe`** | Frontend High Performance | **`fish`** shell + **Vite+ (`vp`)** & **`rustup`** (`stable` + `rust-analyzer`, `clippy`, `rustfmt`, `rust-src`, tự cài sẵn qua `init_hooks`) + bộ build C/C++/OpenSSL (`gcc`, `gcc-c++`, `make`, `pkg-config`, `openssl-devel`) |
+| **`cp`** | Competitive Programming | **`fish`** shell + **`rustup`** (`stable` + `rust-analyzer`, `clippy`, `rustfmt`, `rust-src`, tự cài qua `init_hooks`) + bộ build C/C++/OpenSSL (`gcc`, `gcc-c++`, `make`, `pkg-config`, `openssl-devel`) |
 
 *(Sau này có thể thêm các role khác như `[be-go]`, `[be-dotnet]`, `[py]` ngay trong `distrobox.ini`.)*
 
