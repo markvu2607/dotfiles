@@ -19,6 +19,7 @@ vim.o.tabstop = 2
 
 -- Built-in completion
 vim.o.complete = "."
+vim.o.completeopt = "menuone,noselect,fuzzy"
 vim.o.completetimeout = 100
 
 Config.later(function()

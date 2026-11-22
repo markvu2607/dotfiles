@@ -1,6 +1,9 @@
 local nmap_leader = function(suffix, rhs, desc)
 	vim.keymap.set("n", "<Leader>" .. suffix, rhs, { desc = desc })
 end
+local xmap_leader = function(suffix, rhs, desc)
+	vim.keymap.set("x", "<Leader>" .. suffix, rhs, { desc = desc })
+end
 
 -- Buffer
 nmap_leader("bd", "<Cmd>lua MiniBufremove.delete()<CR>", "Delete")
@@ -29,8 +32,10 @@ nmap_leader("gs", "<Cmd>lua MiniGit.show_at_cursor()<CR>", "Show at cursor")
 
 -- LSP
 nmap_leader("la", "<Cmd>lua vim.lsp.buf.code_action()<CR>", "Actions")
+xmap_leader("la", "<Cmd>lua vim.lsp.buf.code_action()<CR>", "Actions")
 nmap_leader("ld", "<Cmd>lua vim.diagnostic.open_float()<CR>", "Diagnostic popup")
 nmap_leader("lf", "<Cmd>lua require('conform').format()<CR>", "Format")
+xmap_leader("lf", "<Cmd>lua require('conform').format()<CR><Esc>", "Format")
 nmap_leader("li", "<Cmd>lua vim.lsp.buf.implementation()<CR>", "Implementation")
 nmap_leader("ll", "<Cmd>lua vim.lsp.codelens.run()<CR>", "Lens")
 nmap_leader("lr", "<Cmd>lua vim.lsp.buf.rename()<CR>", "Rename")

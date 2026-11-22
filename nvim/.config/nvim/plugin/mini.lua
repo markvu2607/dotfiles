@@ -102,6 +102,10 @@ Config.later(function()
 end)
 
 Config.later(function()
+	require("mini.completion").setup()
+end)
+
+Config.later(function()
 	require("mini.diff").setup()
 end)
 
@@ -125,11 +129,6 @@ Config.later(function()
 	require("mini.jump2d").setup()
 end)
 
--- Tạm tắt vì chưa gắn multistep keymap (bỏ comment khi cấu hình completion <Tab>/<CR>):
--- Config.later(function()
--- 	require("mini.keymap").setup()
--- end)
-
 Config.later(function()
 	require("mini.map").setup()
 end)
@@ -140,6 +139,16 @@ end)
 
 Config.later(function()
 	require("mini.pairs").setup()
+end)
+
+-- Đặt sau mini.pairs để <CR>/<BS> của mini.keymap không bị mini.pairs ghi đè
+Config.later(function()
+	require("mini.keymap").setup()
+	local map_multistep = require("mini.keymap").map_multistep
+	map_multistep("i", "<Tab>", { "pmenu_next" })
+	map_multistep("i", "<S-Tab>", { "pmenu_prev" })
+	map_multistep("i", "<CR>", { "pmenu_accept", "minipairs_cr" })
+	map_multistep("i", "<BS>", { "minipairs_bs" })
 end)
 
 Config.later(function()
