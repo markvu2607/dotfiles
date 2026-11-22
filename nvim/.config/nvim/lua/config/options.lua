@@ -2,8 +2,11 @@ vim.g.mapleader = " "
 
 -- UI
 vim.o.mouse = "a"
+vim.o.relativenumber = true
+vim.o.scrolloff = 5
 vim.o.switchbuf = "usetab"
 vim.o.undofile = true
+vim.o.winborder = "single"
 
 -- Edit
 vim.o.autoindent = true
