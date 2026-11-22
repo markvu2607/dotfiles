@@ -39,6 +39,20 @@ Config.later(function()
 end)
 
 Config.later(function()
+	local ai = require("mini.ai")
+	ai.setup({
+		custom_textobjects = {
+			F = ai.gen_spec.treesitter({ a = "@function.outer", i = "@function.inner" }),
+			c = ai.gen_spec.treesitter({ a = "@class.outer", i = "@class.inner" }),
+			o = ai.gen_spec.treesitter({
+				a = { "@block.outer", "@conditional.outer", "@loop.outer" },
+				i = { "@block.inner", "@conditional.inner", "@loop.inner" },
+			}),
+		},
+	})
+end)
+
+Config.later(function()
 	require("mini.align").setup()
 end)
 
@@ -55,10 +69,26 @@ Config.later(function()
 	miniclue.setup({
 		clues = {
 			Config.leader_group_clues,
+			miniclue.gen_clues.builtin_completion(),
+			miniclue.gen_clues.g(),
+			miniclue.gen_clues.marks(),
+			miniclue.gen_clues.registers(),
 			miniclue.gen_clues.square_brackets(),
+			miniclue.gen_clues.windows(),
+			miniclue.gen_clues.z(),
 		},
 		triggers = {
 			{ mode = { "n", "x" }, keys = "<Leader>" },
+			{ mode = "n", keys = "[" },
+			{ mode = "n", keys = "]" },
+			{ mode = { "n", "x" }, keys = "g" },
+			{ mode = { "n", "x" }, keys = "'" },
+			{ mode = { "n", "x" }, keys = "`" },
+			{ mode = { "n", "x" }, keys = '"' },
+			{ mode = { "i", "c" }, keys = "<C-r>" },
+			{ mode = "n", keys = "<C-w>" },
+			{ mode = { "n", "x" }, keys = "z" },
+			{ mode = "i", keys = "<C-x>" },
 		},
 	})
 end)
@@ -95,9 +125,10 @@ Config.later(function()
 	require("mini.jump2d").setup()
 end)
 
-Config.later(function()
-	require("mini.keymap").setup()
-end)
+-- Tạm tắt vì chưa gắn multistep keymap (bỏ comment khi cấu hình completion <Tab>/<CR>):
+-- Config.later(function()
+-- 	require("mini.keymap").setup()
+-- end)
 
 Config.later(function()
 	require("mini.map").setup()
@@ -127,6 +158,7 @@ Config.later(function()
 	require("mini.trailspace").setup()
 end)
 
-Config.later(function()
-	require("mini.visits").setup()
-end)
+-- Tạm tắt vì chưa gắn keymap <Leader>v (bỏ comment khi dùng quản lý file hay mở theo tần suất):
+-- Config.later(function()
+-- 	require("mini.visits").setup()
+-- end)

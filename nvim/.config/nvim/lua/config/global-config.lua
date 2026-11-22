@@ -20,13 +20,15 @@ Config.leader_group_clues = {
 	{ mode = "n", keys = "<Leader>f", desc = "+Find" },
 	{ mode = "n", keys = "<Leader>g", desc = "+Git" },
 	{ mode = "n", keys = "<Leader>l", desc = "+LSP" },
-	{ mode = "n", keys = "<Leader>o", desc = "+Other" },
-	{ mode = "n", keys = "<Leader>s", desc = "+Sessions" },
+	{ mode = "n", keys = "<Leader>m", desc = "+Map" },
 	{ mode = "n", keys = "<Leader>t", desc = "+Terminal" },
-	{ mode = "n", keys = "<Leader>v", desc = "+Visits" },
 
-	{ mode = "x", keys = "<Leader>g", desc = "+Git" },
-	{ mode = "x", keys = "<Leader>l", desc = "+LSP" },
+	-- Tạm ẩn vì chưa khai báo keymap trong lua/config/keymaps.lua (bỏ comment khi dùng):
+	-- { mode = "n", keys = "<Leader>o", desc = "+Other" },
+	-- { mode = "n", keys = "<Leader>s", desc = "+Sessions" },
+	-- { mode = "n", keys = "<Leader>v", desc = "+Visits" },
+	-- { mode = "x", keys = "<Leader>g", desc = "+Git" },
+	-- { mode = "x", keys = "<Leader>l", desc = "+LSP" },
 }
 
 local gr = vim.api.nvim_create_augroup("custom-config", {})
