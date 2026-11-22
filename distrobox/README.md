@@ -26,6 +26,17 @@ distrobox enter fe
 # rustup target add wasm32-unknown-unknown
 ```
 
+### Cài `cargo-compete` trong container `cp` (Fedora OpenSSL 4.0)
+Vì `cargo-compete v0.10.7` ghim `openssl-sys` cũ không tương thích OpenSSL 4.0 của Fedora mới, kéo source về cập nhật `openssl-sys` rồi build:
+```bash
+just box cp
+distrobox enter cp
+
+git clone --depth 1 https://github.com/qryxip/cargo-compete /tmp/cargo-compete
+cd /tmp/cargo-compete && cargo update -p openssl-sys && cargo install --path .
+rm -rf /tmp/cargo-compete
+```
+
 ### Các lệnh quản lý khác
 ```bash
 distrobox list
